@@ -9,6 +9,8 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/eslint-module": "^4.0.2",
+    "eslint": "^8.38.0",
     "nuxt": "^3.3.3"
   }
 }
