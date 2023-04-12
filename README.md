@@ -110,7 +110,7 @@ export default defineNuxtConfig({
     modules: ['@pinia/nuxt']
 })
 ```
-# Plug in
+# Plug VueUse in
 ### Install VueUse
 ```bash
 pnpm add -D @vueuse/nuxt @vueuse/core
