@@ -122,3 +122,9 @@ export default defineNuxtConfig({
 })
 ```
 
+# Plug SASS in
+### Install related packages
+```bash
+pnpm add -D sass sass-loader
+```
+
