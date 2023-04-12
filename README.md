@@ -99,5 +99,16 @@ export default defineNuxtConfig({
     }
 })
 ```
+# Plug Pinia in
+### Install related packages
+```bash
+pnpm add @pinia/nuxt
+```
+### Register module
+```typescript
+export default defineNuxtConfig({
+    modules: ['@pinia/nuxt']
+})
+```
 
 
