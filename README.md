@@ -6,6 +6,14 @@ Sherman's Nuxt3 boilerplate
 pnpm add -D eslint @nuxtjs/eslint-config-typescript
 pnpm add -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
+### Register module
+// nuxt.config.ts
+```typescript
+export default defineNuxtConfig({
+    modules: ['@nuxtjs/eslint-module'],
+    tailwindcss: {}
+})
+```
 ### Create eslint configuration file
 // .eslintrc
 ```json
@@ -49,5 +57,47 @@ pnpm add -D prettier eslint-config-prettier eslint-plugin-prettier
 ```
 
 ## Plug Tailwind in
+### Install related packages
+```bash
+pnpm add -D @nuxtjs/tailwindcss
+```
+### Create tailwind files
+// tailwind.config.ts
+```typescript
+import type { Config } from 'tailwindcss'
+// import defaultTheme from 'tailwindcss/defaultTheme'
+
+export default <Partial<Config>>{
+    theme: {
+        extend: {
+            colors: {
+                primary: '#00FF00'
+                // primary: defaultTheme.colors.green
+            }
+        }
+    }
+}
+```
+// assets/css/tailwind.css
+```css
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+```
+### Register module
+// nuxt.config.ts
+```typescript
+export default defineNuxtConfig({
+    modules: ['@nuxtjs/tailwindcss'],
+    tailwindcss: {
+        cssPath: '~/assets/css/tailwind.css',
+        configPath: 'tailwind.config'
+        // exposeConfig: false,
+        // config: {},
+        // injectPosition: 0,
+        // viewer: true,
+    }
+})
+```
 
 
