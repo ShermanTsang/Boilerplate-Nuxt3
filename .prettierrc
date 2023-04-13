@@ -16,5 +16,7 @@
   "htmlWhitespaceSensitivity": "ignore",
   "vueIndentScriptAndStyle": false,
   "endOfLine": "auto",
-  "embeddedLanguageFormatting": "auto"
+  "embeddedLanguageFormatting": "auto",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindConfig": "./tailwind.config.ts"
 }

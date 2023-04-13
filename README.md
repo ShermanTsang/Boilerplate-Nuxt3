@@ -4,7 +4,7 @@ Sherman's Nuxt3 boilerplate
 ### Install related packages
 ```bash
 pnpm add -D eslint @nuxtjs/eslint-config-typescript
-pnpm add -D prettier eslint-config-prettier eslint-plugin-prettier
+pnpm add -D prettier eslint-config-prettier eslint-plugin-prettier prettier-plugin-tailwindcss
 ```
 ### Register module
 // nuxt.config.ts
@@ -46,6 +46,33 @@ export default defineNuxtConfig({
   ]
 }
 ```
+### Create prettier configuration file
+// .prettierrc
+```json
+{
+  "printWidth": 200,
+  "tabWidth": 4,
+  "useTabs": false,
+  "semi": false,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "trailingComma": "none",
+  "bracketSpacing": true,
+  "jsxBracketSameLine": true,
+  "arrowParens": "always",
+  "requirePragma": false,
+  "insertPragma": false,
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "ignore",
+  "vueIndentScriptAndStyle": false,
+  "endOfLine": "auto",
+  "embeddedLanguageFormatting": "auto",
+  "plugins": ["prettier-plugin-tailwindcss"],
+  "tailwindConfig": "./tailwind.config.ts"
+}
+```
+
 ### Add eslint lint script
 // package.json
 ```json
