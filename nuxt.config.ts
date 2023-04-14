@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-    modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@vueuse/nuxt'],
+    modules: ['@nuxtjs/eslint-module', '@nuxtjs/tailwindcss', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@vueuse/nuxt'],
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
         configPath: 'tailwind.config'
@@ -8,5 +8,10 @@ export default defineNuxtConfig({
         // config: {},
         // injectPosition: 0,
         // viewer: true,
+    },
+    pinia: {
+        autoImports: [
+            'defineStore' // import { defineStore } from 'pinia'
+        ]
     }
 })
